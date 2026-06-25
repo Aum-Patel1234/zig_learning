@@ -6,6 +6,7 @@ const string_basics = @import("strings.zig");
 const test_integer_overflow = @import("test_integer_overflow.zig");
 const variables_convert = @import("variables_convert.zig");
 const errors = @import("errors.zig");
+const structs_unions_enum = @import("structs_unions_enums.zig");
 
 pub fn main() void {
     var a: i5 = 1;
@@ -38,4 +39,8 @@ pub fn main() void {
 
     // errors
     errors.demonstrate_errors();
+
+    // structs_unions_enums
+    structs_unions_enum.show_unions();
+    structs_unions_enum.show_enums();
 }
