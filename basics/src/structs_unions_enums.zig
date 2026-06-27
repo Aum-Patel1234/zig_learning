@@ -87,5 +87,5 @@ pub fn show_enums() void {
 
     // get enum tag name as string
     const role_name = @tagName(user.role);
-    std.debug.print("Role name: {s}\n", .{role_name});
+    std.debug.print("Role name: {s}\n\n\n", .{role_name});
 }

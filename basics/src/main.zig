@@ -7,6 +7,7 @@ const test_integer_overflow = @import("test_integer_overflow.zig");
 const variables_convert = @import("variables_convert.zig");
 const errors = @import("errors.zig");
 const structs_unions_enum = @import("structs_unions_enums.zig");
+const mem_management = @import("memory_management.zig");
 
 pub fn main() void {
     var a: i5 = 1;
@@ -43,4 +44,6 @@ pub fn main() void {
     // structs_unions_enums
     structs_unions_enum.show_unions();
     structs_unions_enum.show_enums();
+
+    mem_management.show_mem_management();
 }
