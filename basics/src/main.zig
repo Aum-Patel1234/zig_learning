@@ -8,6 +8,8 @@ const variables_convert = @import("variables_convert.zig");
 const errors = @import("errors.zig");
 const structs_unions_enum = @import("structs_unions_enums.zig");
 const mem_management = @import("memory_management.zig");
+const comptime_eg = @import("comptime.zig");
+const Point = @import("point.zig");
 
 pub fn main() void {
     var a: i5 = 1;
@@ -46,4 +48,14 @@ pub fn main() void {
     structs_unions_enum.show_enums();
 
     mem_management.show_mem_management();
+
+    comptime_eg.show_comptime();
+
+    // Self type
+    const p1 = Point.init(0, 3);
+    var p2 = Point.init(3, 0);
+    std.debug.print("Point p1={}, p2={}.\n", .{ p1, p2 });
+    p2.move(1, 0);
+    std.debug.print("Point p1={}, p2={} (moved in x dir).\n", .{ p1, p2 });
+    std.debug.print("Distance between p1 and p2 = {}\n\n\n", .{Point.eucledian_distance(&p1, &p2)});
 }

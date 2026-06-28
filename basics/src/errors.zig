@@ -3,7 +3,7 @@ const std = @import("std");
 const MAX_I32 = std.math.maxInt(i32);
 const MIN_I32 = std.math.minInt(i32);
 
-const AddingError = error{ IntegerOverflowHigh, IntegerOverflowLow };
+pub const AddingError = error{ IntegerOverflowHigh, IntegerOverflowLow };
 
 pub fn demonstrate_errors() void {
     const a: i32 = 3;
